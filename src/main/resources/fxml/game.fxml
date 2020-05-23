@@ -7,6 +7,8 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -17,11 +19,36 @@
          <children>
             <HBox>
                <children>
-                  <Label text="Label">
-                     <font>
-                        <Font size="32.0" />
-                     </font>
-                  </Label>
+                  <VBox>
+                     <children>
+                        <Label text="Red Player:" textFill="#e14343">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Yellow Player:" textFill="#8a7d20">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Pane>
+                     <children>
+                        <Label fx:id="turnInfo" text="Label">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </Pane>
                </children>
             </HBox>
             <GridPane VBox.vgrow="SOMETIMES">
