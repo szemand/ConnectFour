@@ -14,7 +14,7 @@ public class ConnectFourApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(ConnectFourApplication.class.getResource("/fxml/game.fxml"));
+        Parent root = FXMLLoader.load(ConnectFourApplication.class.getResource("/fxml/mainmenu.fxml"));
         primaryStage.setTitle("Connect Four game");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

@@ -12,10 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.shape.Circle;
 import org.tinylog.Logger;
-import game.PlayConnectFour;
 
 public class GameController {
 
@@ -93,8 +90,8 @@ public class GameController {
 
     public void removeNodeByRowColumnIndex(final int row,final int column,GridPane gridPane) {
 
-        ObservableList<Node> childrens = gridPane.getChildren();
-        for(Node node : childrens) {
+        ObservableList<Node> children = gridPane.getChildren();
+        for(Node node : children) {
             if(node instanceof Pane && gridPane.getRowIndex(node) == row && gridPane.getColumnIndex(node) == column) {
                 gridPane.getChildren().remove(node);
                 break;
