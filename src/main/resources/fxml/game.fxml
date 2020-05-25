@@ -21,12 +21,12 @@
                <children>
                   <VBox>
                      <children>
-                        <Label text="Red Player:" textFill="#e14343">
+                        <Label fx:id="redInfo" text="Red Player:" textFill="#e14343">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label text="Yellow Player:" textFill="#8a7d20">
+                        <Label fx:id="yellowInfo" text="Yellow Player:" textFill="#8a7d20">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -95,6 +95,14 @@
                   </GridPane>
                </children>
             </GridPane>
+            <VBox alignment="CENTER">
+               <children>
+                  <Button fx:id="backToMain" mnemonicParsing="false" onAction="#backToMain" text="Main Menu" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </VBox>
          </children>
       </VBox>
    </children>

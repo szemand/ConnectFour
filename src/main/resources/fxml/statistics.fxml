@@ -9,12 +9,11 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #9ed4dc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatisticsController">
    <center>
-      <TableView maxWidth="-Infinity" prefHeight="200.0" prefWidth="360.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="profileTable" maxWidth="-Infinity" prefHeight="200.0" prefWidth="360.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="150.0" text="Name" />
-          <TableColumn prefWidth="70.0" text="Wins" />
-            <TableColumn prefWidth="70.0" text="Losses" />
-            <TableColumn prefWidth="70.0" text="Winrate" />
+          <TableColumn fx:id="playernameCol" prefWidth="200.0" text="Name" />
+          <TableColumn fx:id="winsCol" prefWidth="70.0" text="Wins" />
+            <TableColumn fx:id="lossesCol" prefWidth="70.0" text="Losses" />
         </columns>
       </TableView>
    </center>
