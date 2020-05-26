@@ -5,8 +5,8 @@ import org.tinylog.Logger;
 public class WinConditionChecker {
 
     private boolean vertCheck(int[][] board, int player){
-        for (int i=0; i<board[0].length; i++){ //7
-            for (int j=0; j<=board.length-4; j++){ //6
+        for (int i=0; i<board[0].length; i++){
+            for (int j=0; j<=board.length-4; j++){
                 if (board[j][i] == player && board[j+1][i] == player && board[j+2][i] == player && board[j+3][i] == player){
                     return true;
                 }
@@ -16,8 +16,8 @@ public class WinConditionChecker {
     }
 
     private boolean horCheck(int[][] board, int player){
-        for (int i=0; i<board.length; i++){ //6
-            for (int j=0; j<=board[i].length-4; j++){ //7
+        for (int i=0; i<board.length; i++){
+            for (int j=0; j<=board[i].length-4; j++){
                 if (board[i][j] == player && board[i][j+1] == player && board[i][j+2] == player && board[i][j+3] == player){
                     return true;
                 }
