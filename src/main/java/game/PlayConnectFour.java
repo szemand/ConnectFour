@@ -13,6 +13,9 @@ public class PlayConnectFour {
     public int lastMoveRow;
     public int lastMoveCol;
 
+    /**
+     * The 2D matrix, representing the original 6-row 7-column board.
+     */
     public int[][] board = new int[6][7];
 
     /**
@@ -42,7 +45,7 @@ public class PlayConnectFour {
     }
 
     /**
-     * Changes the turns between the two players
+     * Changes the turns between the two players.
      * @param lastplayer the player's number in the matrix, whose turn just ended
      */
     public void changeCurrentPlayer(int lastplayer){
@@ -55,7 +58,7 @@ public class PlayConnectFour {
     }
 
     /**
-     * Returns whether the game is over or not
+     * Returns whether the game is over or not.
      * @return {@code true} if the game is over, {@code false} if not
      */
     public boolean isGameOver(){

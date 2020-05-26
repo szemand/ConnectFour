@@ -3,12 +3,12 @@ package game;
 import org.tinylog.Logger;
 
 /**
- * Class responsible for checking if the player have won the game or not
+ * Class responsible for checking if the player have won the game or not.
  */
 public class WinConditionChecker {
 
     /**
-     * Checks for winning by 4 in-a-row vertically
+     * Checks for winning by 4 in-a-row vertically.
      * @param board the board the method should analyze
      * @param player the player whose disks the method should look for
      * @return {@code true} if the player's moves had met this condition, {@code false} if not
@@ -25,7 +25,7 @@ public class WinConditionChecker {
     }
 
     /**
-     * Checks for winning by 4 in-a-row horizontally
+     * Checks for winning by 4 in-a-row horizontally.
      * @param board the board the method should analyze
      * @param player the player whose disks the method should look for
      * @return {@code true} if the player's moves had met this condition, {@code false} if not

@@ -4,10 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
 
+/**
+ * Class representing a player's information.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,10 +21,19 @@ public class ProfileStatistics {
     @GeneratedValue
     private Long id;
 
+    /**
+     * The name or nickname of the player.
+     */
     @Column(nullable = false)
     private String playername;
 
+    /**
+     * The number of the player's won matches.
+     */
     private int wins;
 
+    /**
+     * The number of the player's lost matches.
+     */
     private int losses;
 }

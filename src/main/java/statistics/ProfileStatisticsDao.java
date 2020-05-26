@@ -26,7 +26,7 @@ public class ProfileStatisticsDao extends GenericJpaDao<ProfileStatistics> {
     }
 
     /**
-     * Returns all of the registered players
+     * Returns all of the registered players.
      * @return the playername of all the registered players in a {@code List}.
      */
     @Transactional
