@@ -43,12 +43,6 @@ public class GameController {
     private Label turnInfo;
 
     @FXML
-    private Label redInfo;
-
-    @FXML
-    private Label yellowInfo;
-
-    @FXML
     private Button backToMain;
 
     private Image EmptyPoint = new Image(getClass().getResource("/images/EmptyPoint.png").toExternalForm());
@@ -81,8 +75,10 @@ public class GameController {
         gameOver.addListener((observable, oldValue, newValue) -> {
             if (newValue) {
                 turnInfo.setText("Game is over, " + playernames[connectFour.currentPlayer-1]+ " won!");
+                Logger.info("Game Over");
                 profileStatisticsDao.updateWinner(playernames[connectFour.currentPlayer-1]);
                 profileStatisticsDao.updateLoser(playernames[1-(connectFour.currentPlayer-1)]);
+                Logger.info("Changes saved into the database");
                 backToMain.setVisible(true);
                 backToMain.setDisable(false);
             }
@@ -90,13 +86,11 @@ public class GameController {
         gameDraw.addListener((observable, oldValue, newValue) -> {
             if (newValue) {
                 turnInfo.setText("Game Over! Draw!");
+                Logger.info("Game resulted in draw, no changes in statistics");
                 backToMain.setVisible(true);
                 backToMain.setDisable(false);
             }
         });
-
-        redInfo.setText("Red: "+playernames[0]);
-        yellowInfo.setText("Yellow: "+playernames[1]);
     }
 
     @FXML

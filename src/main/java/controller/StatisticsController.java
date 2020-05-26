@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import org.tinylog.Logger;
 import statistics.ProfileStatistics;
 import statistics.ProfileStatisticsDao;
 
@@ -42,9 +43,7 @@ public class StatisticsController {
     @FXML
     private void initialize(){
 
-        profileStatisticsDao.findAll()
-                .stream()
-                .forEach(System.out::println);
+        Logger.info("Loading entities from database...");
 
         List<ProfileStatistics> profilelist = profileStatisticsDao.allProfiles();
 
@@ -56,6 +55,7 @@ public class StatisticsController {
         observableResult.addAll(profilelist);
 
         profileTable.setItems(observableResult);
+        Logger.info("Loaded!");
     }
 
     public void switchToMainMenu(ActionEvent event) throws IOException {

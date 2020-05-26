@@ -1,5 +1,8 @@
 package game;
 
+/**
+ * Class representing the game board in a 2D matrix, and providing several information about the game state.
+ */
 public class PlayConnectFour {
 
     private static final int[] Players = {1, 2};
@@ -12,6 +15,11 @@ public class PlayConnectFour {
 
     public int[][] board = new int[6][7];
 
+    /**
+     * Places a disk in the selected column of the board.
+     * Automatically sets the next player's turn after checking if the game ended.
+     * @param column the column to drop the disk in
+     */
     public void placeInColumn(int column) {
         if (!gameOver && !gameDraw) {
             for(int i = 5; i>=0; i--){
@@ -33,6 +41,10 @@ public class PlayConnectFour {
         }
     }
 
+    /**
+     * Changes the turns between the two players
+     * @param lastplayer the player's number in the matrix, whose turn just ended
+     */
     public void changeCurrentPlayer(int lastplayer){
         if(lastplayer==Players[0]){
             currentPlayer = Players[1];
@@ -42,6 +54,10 @@ public class PlayConnectFour {
 
     }
 
+    /**
+     * Returns whether the game is over or not
+     * @return {@code true} if the game is over, {@code false} if not
+     */
     public boolean isGameOver(){
         if (this.gameOver){
             return true;
@@ -50,6 +66,11 @@ public class PlayConnectFour {
         }
     }
 
+    /**
+     * Returns whether the game resulted in a draw or not.
+     * Should only occour if there ar no empty holes left
+     * @return {@code true} if the game is a draw, {@code false} in every other case
+     */
     public boolean isGameDraw(){
         if (this.gameDraw){
             return true;

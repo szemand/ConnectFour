@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -17,26 +16,8 @@
    <children>
       <VBox prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox>
+            <HBox alignment="CENTER">
                <children>
-                  <VBox>
-                     <children>
-                        <Label fx:id="redInfo" text="Red Player:" textFill="#e14343">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="yellowInfo" text="Yellow Player:" textFill="#8a7d20">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="5.0" top="5.0" />
-                     </padding>
-                  </VBox>
-                  <Region HBox.hgrow="ALWAYS" />
                   <Pane>
                      <children>
                         <Label fx:id="turnInfo" text="Label">
